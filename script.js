@@ -7,3 +7,5 @@ button.addEventListener("click",()=>{console.log("button")},true)
 
 const outer=document.querySelector(".outer")
 outer.addEventListener("click",()=>{console.log("outer div")},true)
+
+console.log("new code")
