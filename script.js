@@ -50,9 +50,48 @@
 // infinite()
 
 //Temporal Dead Zone(TDZ)
-let total=40
-function calculate(){
-    console.log(total)
-    let total=100
-}
-calculate()
+// let total=40
+// function calculate(){
+//     console.log(total)
+//     let total=100
+// }
+// calculate()
+
+//timeout method
+
+// setTimeout(()=>{
+//     console.log("line after 5 sec")
+// },2*3000)
+
+// setTimeout(()=>(
+//     alert("line after 5 sec")
+// ),2*3000)
+
+// const timerID=setInterval(() => {console.log("setinterval")},1000)
+
+// const timeoutId=setInterval(()=>{clearInterval(timerID)},10000)
+
+// let i=1;
+// const id=setInterval(() => {
+//     if(i==10) clearInterval(id)
+//     console.log(i)
+//     i+=1
+// }, 1000);
+
+//Create element and remove method
+
+const name=document.querySelector("#name")
+const btn=document.querySelector(".btn")
+const list=document.querySelector(".list")
+btn.addEventListener("click",()=>{
+    const li=document.createElement("li")
+    const dlt=document.createElement("button")
+    dlt.innerText="delete"
+    dlt.addEventListener("click",()=>{
+        list.removeChild(li)
+    })
+    li.innerText=name.value;
+    li.append(dlt)
+    list.appendChild(li)
+    name.value=""
+})
