@@ -80,23 +80,46 @@
 
 //Create element and remove method
 
-const name=document.querySelector("#name")
-const btn=document.querySelector(".btn")
-const list=document.querySelector(".list")
-btn.addEventListener("click",()=>{
-    if(name.value===""){
-        alert("Enter The Name Of Student")
-        return;
-    }
-    const li=document.createElement("li")
-    const dlt=document.createElement("button")
-    dlt.innerText="delete"
-    dlt.addEventListener("click",()=>{
-        list.removeChild(li)
-    })
-    li.innerText=name.value;
-    li.append(dlt)
-    list.appendChild(li)
-    name.value=""
+// const name=document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
+// btn.addEventListener("click",()=>{
+//     if(name.value===""){
+//         alert("Enter The Name Of Student")
+//         return;
+//     }
+//     const li=document.createElement("li")
+//     const dlt=document.createElement("button")
+//     dlt.innerText="delete"
+//     dlt.addEventListener("click",()=>{
+//         list.removeChild(li)
+//     })
+//     li.innerText=name.value;
+//     li.append(dlt)
+//     list.appendChild(li)
+//     name.value=""
     
-})
+// })
+
+//Callback Function
+// function print(num){
+//     console.log("Inside print")
+//     num()
+// }
+
+// function sample(){
+//     console.log("inside callback")
+// }
+// print(sample)
+
+function print(num){
+    setTimeout(()=>{
+        console.log("inside print")
+        num()
+    },5000)
+}
+
+function sample(){
+    console.log("inside callback")
+}
+print(sample)
