@@ -84,6 +84,10 @@ const name=document.querySelector("#name")
 const btn=document.querySelector(".btn")
 const list=document.querySelector(".list")
 btn.addEventListener("click",()=>{
+    if(name.value===""){
+        alert("Enter The Name Of Student")
+        return;
+    }
     const li=document.createElement("li")
     const dlt=document.createElement("button")
     dlt.innerText="delete"
@@ -94,4 +98,5 @@ btn.addEventListener("click",()=>{
     li.append(dlt)
     list.appendChild(li)
     name.value=""
+    
 })
