@@ -98,7 +98,7 @@
 //     li.append(dlt)
 //     list.appendChild(li)
 //     name.value=""
-    
+
 // })
 
 //Callback Function
@@ -112,14 +112,30 @@
 // }
 // print(sample)
 
-function print(num){
-    setTimeout(()=>{
-        console.log("inside print")
-        num()
-    },5000)
-}
+// function print(num){
+//     setTimeout(()=>{
+//         console.log("inside print")
+//         num()
+//     },5000)
+// }
 
-function sample(){
-    console.log("inside callback")
-}
-print(sample)
+// function sample(){
+//     console.log("inside callback")
+// }
+// print(sample)
+
+console.log("starting Home work....");
+
+setTimeout(() => {
+    console.log("homwwork done...");
+    console.log("Starting Dinner...");
+
+    setTimeout(() => {
+        console.log("Dinner Done...");
+        console.log("getting ready to go out...");
+
+        setTimeout(() => {
+            console.log("going to the play ground...");
+        }, 1000); //after dinner
+    }, 1500) //dinner table
+}, 2000); //homework time
