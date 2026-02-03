@@ -124,7 +124,7 @@
 // }
 // print(sample)
 
-console.log("starting Home work....");
+console.log("starting Homework....");
 
 setTimeout(() => {
     console.log("homewwork done...");
