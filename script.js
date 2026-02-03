@@ -127,7 +127,7 @@
 console.log("starting Home work....");
 
 setTimeout(() => {
-    console.log("homwwork done...");
+    console.log("homewwork done...");
     console.log("Starting Dinner...");
 
     setTimeout(() => {
