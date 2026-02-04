@@ -124,18 +124,44 @@
 // }
 // print(sample)
 
-console.log("starting Homework....");
+// console.log("starting Homework....");
 
-setTimeout(() => {
-    console.log("homewwork done...");
-    console.log("Starting Dinner...");
+// setTimeout(() => {
+//     console.log("homewwork done...");
+//     console.log("Starting Dinner...");
 
+//     setTimeout(() => {
+//         console.log("Dinner Done...");
+//         console.log("getting ready to go out...");
+
+//         setTimeout(() => {
+//             console.log("going to the play ground...");
+//         }, 1000); //after dinner
+//     }, 1500) //dinner table
+// }, 2000); //homework time
+
+function finishhomework(callback) {
+    console.log("starting homework...");
     setTimeout(() => {
-        console.log("Dinner Done...");
-        console.log("getting ready to go out...");
+        console.log("homework done!...");
+        callback();
+    }, 2000);
+}
 
-        setTimeout(() => {
-            console.log("going to the play ground...");
-        }, 1000); //after dinner
-    }, 1500) //dinner table
-}, 2000); //homework time
+function eatdinner(callback) {
+    console.log("starting dinner...")
+    setTimeout(() => {
+        console.log("Dinner done!...")
+        callback();
+    }, 1500)
+}
+
+function gotoplaground() {
+    console.log("Going to playground!...");
+}
+
+finishhomework(() => {
+    eatdinner(() => {
+        gotoplaground();
+    });
+});
