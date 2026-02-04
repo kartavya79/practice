@@ -140,28 +140,88 @@
 //     }, 1500) //dinner table
 // }, 2000); //homework time
 
-function finishhomework(callback) {
-    console.log("starting homework...");
-    setTimeout(() => {
-        console.log("homework done!...");
-        callback();
-    }, 2000);
+//Hell callback
+// function finishhomework(callback) {
+//     console.log("starting homework...");
+//     setTimeout(() => {
+//         console.log("homework done!...");
+//         callback();
+//     }, 2000);
+// }
+
+// function eatdinner(callback) {
+//     console.log("starting dinner...")
+//     setTimeout(() => {
+//         console.log("Dinner done!...")
+//         callback();
+//     }, 1500)
+// }
+
+// function gotoplaground() {
+//     console.log("Going to playground!...");
+// }
+
+// finishhomework(() => {
+//     eatdinner(() => {
+//         gotoplaground();
+//     });
+// });
+
+//Promise 
+// console.log("before Promise")
+// const p=new Promise((resolve,reject)=>{
+//     // resolve()
+//     let done=true;
+//     setTimeout(()=>{
+//         if(done){
+//             // resolve("work has been completed")
+//             resolve({name:"Shubham",age:19})
+//         }
+//         else{
+//             reject("work has been not completed")
+//         }
+//         // resolve("resolved")
+//         // reject()
+//     },5000)
+// })
+// // console.log(p)
+// p.then((data)=>{
+//     console.log("promise resolved")
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("finally block")
+// })
+// console.log("After promise")
+
+function dohomework(){
+    const p=new Promise((resolve,reject)=>{
+        let done=true;
+        setTimeout(()=>{
+            if(done){
+                console.log("homework completed")
+                resolve("homework done")
+            }
+            else{
+                reject("homework not done")
+            }
+        },2000)
+    })
+    return p;
 }
 
-function eatdinner(callback) {
-    console.log("starting dinner...")
-    setTimeout(() => {
-        console.log("Dinner done!...")
-        callback();
-    }, 1500)
+function eatdinner(){
+    const p=new Promise((resolve,reject)=>{
+        let done=true;
+        setTimeout(()=>{
+            if(done){
+                console.log("dinner completed")
+                resolve("dinner done")
+            }
+            else{
+                reject("dinner not done")
+            }
+        },3000)
+    })
+    return p;
 }
-
-function gotoplaground() {
-    console.log("Going to playground!...");
-}
-
-finishhomework(() => {
-    eatdinner(() => {
-        gotoplaground();
-    });
-});
