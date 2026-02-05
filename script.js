@@ -205,7 +205,7 @@ function dohomework(){
             else{
                 reject("homework not done")
             }
-        },2000)
+        },3000)
     })
     return p;
 }
@@ -221,7 +221,37 @@ function eatdinner(){
             else{
                 reject("dinner not done")
             }
-        },3000)
+        },2000)
     })
     return p;
 }
+
+function gotoplayground(){
+    const p=new Promise((resolve,reject)=>{
+        let done=true;
+        setTimeout(()=>{
+            if(done){
+                console.log("going to playground")
+                resolve("krish going to playground")
+            }
+            else{
+                reject("not going to playground")
+            }
+        },2000)
+    })
+    return p;
+}
+
+dohomework().then((data)=>{
+    console.log(data)
+    return eatdinner()
+}).then((data)=>{
+    console.log(data)
+    return gotoplayground()
+}).then((data)=>{
+    console.log(data)
+}).catch((err)=>{
+    console.log(err)
+}).finally(()=>{
+    console.log("go to sleep")
+})
