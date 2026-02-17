@@ -256,38 +256,54 @@
 //     console.log("go to sleep")
 // })
 
-function oderfood(){
-    return new Promise((res,rej)=>{
-        setTimeout(()=>{
-            console.log("order food")
-            res("order food")
-        })
-    },2000)
-}
+// function oderfood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("order food")
+//             res("order food")
+//         })
+//     },2000)
+// }
 
-function preparefood(){
-    return new Promise((res,rej)=>{
-        setTimeout(()=>{
-            console.log("preparing food")
-            res("preparing food")
-        })
-    },3000)
-}
+// function preparefood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("preparing food")
+//             res("preparing food")
+//         })
+//     },3000)
+// }
 
-function deliverfood(){
-    return new Promise((res,rej)=>{
-        setTimeout(()=>{
-            console.log("deliver food")
-            res("deliver food")
-        })
-    },2000)
-}
+// function deliverfood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("deliver food")
+//             res("deliver food")
+//         })
+//     },2000)
+// }
 
-async function foodorder(){
-    const data=await oderfood()
-    console.log(data)
-    await oderfood()
-    await preparefood()
-    await deliverfood()
+// async function foodorder(){
+//     const data=await oderfood()
+//     console.log(data)
+//     await oderfood()
+//     await preparefood()
+//     await deliverfood()
+// }
+// foodorder()
+    let age=16
+    if(age<18){
+        // console.log("you are a minor")
+        throw new Error("you are a minor")
+    }
+
+// console.log("first line")
+try{
+    // let sample=345
+    console.log(sample)
+    console.log("Line after sample")
+}catch(e){
+    console.error(e)
+    console.log("wooho we got an error")
 }
-foodorder()
+// console.log("Last line")
