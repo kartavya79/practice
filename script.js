@@ -291,14 +291,14 @@
 //     await deliverfood()
 // }
 // foodorder()
+
+console.log("first line")
+try{
     let age=16
     if(age<18){
         // console.log("you are a minor")
         throw new Error("you are a minor")
     }
-
-// console.log("first line")
-try{
     // let sample=345
     console.log(sample)
     console.log("Line after sample")
@@ -306,4 +306,4 @@ try{
     console.error(e)
     console.log("wooho we got an error")
 }
-// console.log("Last line")
+console.log("Last line")
