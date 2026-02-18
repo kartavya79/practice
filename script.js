@@ -292,18 +292,51 @@
 // }
 // foodorder()
 
-console.log("first line")
-try{
-    let age=16
-    if(age<18){
-        // console.log("you are a minor")
-        throw new Error("you are a minor")
+// console.log("first line")
+// try{
+//     let age=16
+//     if(age<18){
+//         // console.log("you are a minor")
+//         throw new Error("you are a minor")
+//     }
+//     // let sample=345
+//     console.log(sample)
+//     console.log("Line after sample")
+// }catch(e){
+//     console.error(e)
+//     console.log("wooho we got an error")
+// }
+// console.log("Last line")
+
+async function getdata(){
+    try{
+        // const response=await fetch("https://dummyjson.com/products") //Get data
+        const response=await fetch("https://dummyjson.com/products/add",{
+            method:"post",
+            headers:{"content-type":"appliction/json"},
+            body: JSON.stringify({
+                "title":"MAckbook m4",
+                "desc":"lorem ispsum",
+                "category":"electronics",
+                "price":999.8,
+                "disountedprice":10.48,
+                "rating":4.59,
+                "stock":99,
+            })
+
+        })
+        if(response.ok===false){
+            throw new Error("something went wrong");
+        }
+        console.log(response)
+        const data=await response.json()
+        console.log(data)
+        // data.products.forEach((product)=>{
+        //     console.log(product.title)
+        // })
+        }catch(e){
+            console.log(e)
+        }
     }
-    // let sample=345
-    console.log(sample)
-    console.log("Line after sample")
-}catch(e){
-    console.error(e)
-    console.log("wooho we got an error")
-}
-console.log("Last line")
+    
+getdata()
