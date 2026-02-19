@@ -308,35 +308,66 @@
 // }
 // console.log("Last line")
 
-async function getdata(){
-    try{
-        // const response=await fetch("https://dummyjson.com/products") //Get data
-        const response=await fetch("https://dummyjson.com/products/add",{
-            method:"post",
-            headers:{"content-type":"appliction/json"},
-            body: JSON.stringify({
-                "title":"MAckbook m4",
-                "desc":"lorem ispsum",
-                "category":"electronics",
-                "price":999.8,
-                "disountedprice":10.48,
-                "rating":4.59,
-                "stock":99,
-            })
+// async function getdata(){
+//     try{
+//         // const response=await fetch("https://dummyjson.com/products") //Get data
+//         const response=await fetch("https://dummyjson.com/products/add",{
+//             method:"post",
+//             headers:{"content-type":"appliction/json"},
+//             body: JSON.stringify({
+//                 "title":"MAckbook m4",
+//                 "desc":"lorem ispsum",
+//                 "category":"electronics",
+//                 "price":999.8,
+//                 "disountedprice":10.48,
+//                 "rating":4.59,
+//                 "stock":99,
+//             })
 
-        })
-        if(response.ok===false){
-            throw new Error("something went wrong");
-        }
-        console.log(response)
-        const data=await response.json()
-        console.log(data)
-        // data.products.forEach((product)=>{
-        //     console.log(product.title)
-        // })
-        }catch(e){
-            console.log(e)
-        }
-    }
+//         })
+//         if(response.ok===false){
+//             throw new Error("something went wrong");
+//         }
+//         console.log(response)
+//         const data=await response.json()
+//         console.log(data)
+//         // data.products.forEach((product)=>{
+//         //     console.log(product.title)
+//         // })
+//         }catch(e){
+//             console.log(e)
+//         }
+//     }
     
-getdata()
+// getdata()
+
+
+//types of storage
+
+// localStorage.setItem("name","kartavya")
+// localStorage.setItem("age",19)
+
+// const uname=localStorage.getItem("name")
+// console.log(uname)
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// localStorage.clear()
+
+// sessionStorage.setItem("name","kartavya")
+// sessionStorage.setItem("age",19)
+
+// const uname=sessionStorage.getItem("name","kartavya")
+// console.log(uname)
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("name")
+
+document.cookie="name=Kartavya; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+document.cookie="age=19; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+console.log(document.cookie)
+
+async function fetchData(){
+    await fetch("http://127.0.0.1:5500/index.html")
+}
+fetchData()
