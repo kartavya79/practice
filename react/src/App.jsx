@@ -121,19 +121,21 @@
 // }
 
 // export default App
+
 import React, { useState } from 'react'
 import './App.css'
-import Sample from './component/Sample'
-import Navbar from './component/Navbar'
-import HomePage from './component/HomePage'
+
+import Sample from "./components/sample"
+import Navbar from "./components/Navbar"
+import HomePage from "./components/HomePage"
 
 function App() {
-  const [menu, setMenu] = useState("Sports")
-  const [abc, setAbc] = useState("Entertainment")
+  const [menu] = useState("Sports")
+  const [abc] = useState("Entertainment")
 
   return (
     <>
-      <HomePage/>
+      <HomePage />
       <Navbar list={menu} />
       <Navbar list={abc} />
       <Sample />

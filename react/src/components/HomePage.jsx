@@ -1,20 +1,11 @@
 import React from 'react'
 
 function HomePage() {
-  const loggedin=false;
-//   if(loggedin){
-//     return (
-//         <button>Logout</button>
-//     )
-//   }else{
-//     return (
-//         <button>Login</button>
-//     )
-//   }
-
-return(
-    loggedin?<button>Logout</button>: <button>Login</button>
-)
+  return (
+    <div>
+      <h1>Welcome to Home Page </h1>
+    </div>
+  )
 }
 
 export default HomePage
