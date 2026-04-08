@@ -20,6 +20,8 @@
 // export default Sample
 
 import React, { useState } from 'react'
+import style from "../css/sample.module.css"
+import style from "../css/NavBar.module.css"
 
 function Sample() {
   const [count, setCount] = useState(0)
@@ -29,11 +31,14 @@ function Sample() {
       <h1>This is Sample Component</h1>
       <h2>{count}</h2>
 
-      <button onClick={() => setCount(count + 1)}>
+      {/* <button style={{ backgroundColor: "red", color: "white", width: "100px", height: "30px" }} onClick={() => setCount(count + 1)}>
+        Increment
+      </button> */}
+      <button className={style.btn} onClick={() => setCount(count + 1)}>
         Increment
       </button>
 
-      <button onClick={() => setCount(count - 1)}>
+      <button style={{ backgroundColor: "yellow", color: "black", width: "100px", height: "30px" }} onClick={() => setCount(count - 1)}>
         Decrement
       </button>
     </div>

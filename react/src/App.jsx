@@ -127,7 +127,7 @@ import './App.css'
 
 import Sample from "./components/sample"
 import Navbar from "./components/Navbar"
-import HomePage from "./components/HomePage"
+import HomePage from "./components/homepage"
 
 function App() {
   const [menu] = useState("Sports")
