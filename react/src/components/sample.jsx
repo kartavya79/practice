@@ -20,8 +20,10 @@
 // export default Sample
 
 import React, { useState } from 'react'
-import style from "../css/sample.module.css"
-import style from "../css/NavBar.module.css"
+// import style from "../css/sample.module.css"
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
 
 function Sample() {
   const [count, setCount] = useState(0)
@@ -31,12 +33,13 @@ function Sample() {
       <h1>This is Sample Component</h1>
       <h2>{count}</h2>
 
-      {/* <button style={{ backgroundColor: "red", color: "white", width: "100px", height: "30px" }} onClick={() => setCount(count + 1)}>
-        Increment
-      </button> */}
-      <button className={style.btn} onClick={() => setCount(count + 1)}>
+      <button css={functionbutton} onClick={() => setCount(count + 1)}>
         Increment
       </button>
+      {/* <button className={style.btn} onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+       */}
 
       <button style={{ backgroundColor: "yellow", color: "black", width: "100px", height: "30px" }} onClick={() => setCount(count - 1)}>
         Decrement
@@ -44,8 +47,21 @@ function Sample() {
     </div>
   )
 }
+const functionbutton=css`
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 30px;
+`
+const Button = styled.button`
+  background-color: ${(props) => props.danger ? "red" : "lightgray"};
+  color: ${(props) => props.color || "black"};
+  width: 100px;
+  height: 30px;
+`
 
 export default Sample
+
 // function Sample(){
 //     const[count,setCount] = useState(0)
 
