@@ -44,6 +44,7 @@ function Sample() {
       <button style={{ backgroundColor: "yellow", color: "black", width: "100px", height: "30px" }} onClick={() => setCount(count - 1)}>
         Decrement
       </button>
+      <button className='bg-red-600 p-0.5 text-white'>sampled</button>
     </div>
   )
 }
