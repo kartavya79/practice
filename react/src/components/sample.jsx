@@ -27,11 +27,14 @@ import { css } from "@emotion/react";
 
 function Sample() {
   const [count, setCount] = useState(0)
+  const [name , setName] = useState("kartavya")
 
   return (
     <div>
       <h1>This is Sample Component</h1>
       <h2>{count}</h2>
+      <h3>{name}</h3>
+      <button onClick={()=>setName("krish")}>Change Name</button>
 
       <button css={functionbutton} onClick={() => setCount(count + 1)}>
         Increment
