@@ -1,52 +1,3 @@
-// import React, { Component } from 'react'
-
-//  class Sample extends Component {
-//     constructor(props){
-//         super(props)
-//         this.state = {
-//             count: 0,
-//         }
-//     }
-
-//     componentDidMount(){
-//       console.log("Component is mounted")
-//     }
-
-//     shouldComponentUpdate(nextProps, nextState){
-//         // if(nextState.count === 1){
-//         //   return false
-//         // }
-//         // return true
-//         console.log("Component should update")
-//         return true
-//     }
-
-//     componentDidUpdate(){
-//       console.log("Component Did Update")
-//     }
-
-//     componentWillUnmount(){
-//       console.log("Component Will Unmount")
-//     }
-
-//     increment = () => {
-//         this.setState({count: this.state.count + 1})
-//     }
-//   render() {
-//     return (
-//       <div>
-//         <h1>This is a sample component</h1>
-//         <h2>{this.state.count}</h2>
-//         <button onClick={this.increment}>Increment</button>
-//       </div>
-//     )
-//   }
-// }
-
-// export default Sample
-
-
-import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import styles from "../css/Sample.module.css"
 import NavStyle from "../css/NavBar.module.css"
@@ -58,7 +9,7 @@ import axios from "axios"
 function Sample() {
   // let count=0
   const [count, setCount]=useState(0)
-  const[name, setName]= useState("Devendra")
+  const[name, setName]= useState("Kartavya")
   const [loading, setLoading]=useState(false)
   const inputRef = useRef(null)
 
