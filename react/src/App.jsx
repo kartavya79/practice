@@ -128,13 +128,19 @@ import './App.css'
 import Sample from "./components/sample"
 import Navbar from "./components/Navbar"
 import HomePage from "./components/homepage"
+import User from "./components/User"
+import { UserContext } from './UserContext'
 
 function App() {
   const [menu] = useState("Sports")
   const [abc] = useState("Entertainment")
+  const name="Kartavya"
 
   return (
     <>
+    <UserContext.Provider value={name}>
+      <User />
+    </UserContext.Provider>
       <HomePage />
       <Navbar list={menu} />
       <Navbar list={abc} />
